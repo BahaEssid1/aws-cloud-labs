@@ -103,40 +103,40 @@ cat menu-downloaded.txt
 
 
 Step 9 — Create IAM User
-awslocal iam create-user --user-name lecafe-app
-awslocal iam list-users
+- awslocal iam create-user --user-name lecafe-app
+- awslocal iam list-users
 
 
 Attach Policy
-awslocal iam attach-user-policy \
+- awslocal iam attach-user-policy \
   --user-name lecafe-app \
   --policy-arn arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess
 
-awslocal iam list-attached-user-policies --user-name lecafe-app
+- awslocal iam list-attached-user-policies --user-name lecafe-app
 
 <img width="1438" height="257" alt="7" src="https://github.com/user-attachments/assets/f9c0c76e-ca5b-4df5-9b24-c7f7a7e41e92" />
 
 
 Step 10 — Create SQS Queue
-awslocal sqs create-queue --queue-name lecafe-orders
-awslocal sqs get-queue-url --queue-name lecafe-orders
+- awslocal sqs create-queue --queue-name lecafe-orders
+- awslocal sqs get-queue-url --queue-name lecafe-orders
 
 <img width="1432" height="408" alt="8" src="https://github.com/user-attachments/assets/2cb0093b-23d3-4466-8855-c1c03c8dda52" />
 
 
 Send & Receive Message
-awslocal sqs send-message \
+- awslocal sqs send-message \
   --queue-url http://localhost:4566/000000000000/lecafe-orders \
   --message-body '{"item": "Latte", "size": "large", "table": 7}'
 
-awslocal sqs receive-message \
+ -awslocal sqs receive-message \
   --queue-url http://localhost:4566/000000000000/lecafe-orders
 
 <img width="1450" height="302" alt="9" src="https://github.com/user-attachments/assets/f5fc1634-7e19-404b-841c-5771109adbba" />
 
 
 🔍 Part 5 — Inspection
-Step 11 — Swagger UI
+- Step 11 — Swagger UI
 
 Access:
 
@@ -149,7 +149,7 @@ http://localhost:4566/_localstack/swagger
 
 
 Step 12 — Logs
-localstack logs
+- localstack logs
 
 <img width="1192" height="392" alt="12" src="https://github.com/user-attachments/assets/49b3083b-8b05-4b99-818c-2b92b397e222" />
 
