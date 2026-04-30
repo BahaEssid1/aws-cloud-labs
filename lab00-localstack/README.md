@@ -38,7 +38,8 @@ This allows developers to test and experiment with AWS services locally without 
 
 LocalStack and AWS CLI local wrapper were installed using pip:
 
-```bash
+
+
 pip install localstack awscli-local
 
 📸 Screenshot:
