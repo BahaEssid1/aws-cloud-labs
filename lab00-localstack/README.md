@@ -42,9 +42,6 @@ LocalStack and AWS CLI local wrapper were installed using pip:
 
 pip install localstack awscli-local
 
-📸 Screenshot:
-
-(Add installation screenshot here)
 
 2. Start LocalStack
 
@@ -52,9 +49,7 @@ LocalStack was started in local mode:
 
 localstack start
 
-📸 Screenshot:
-
-(Add LocalStack running screenshot here)
+<img width="1168" height="457" alt="1" src="https://github.com/user-attachments/assets/6c8d3486-0cf5-42c8-8874-43b5eb0ff425" />
 
 3. Check LocalStack health
 
@@ -62,9 +57,11 @@ Verified that LocalStack services are running:
 
 Invoke-RestMethod http://localhost:4566/_localstack/health
 
-📸 Screenshot:
+<img width="1421" height="151" alt="4" src="https://github.com/user-attachments/assets/153f4c57-2715-4825-a257-bdf302e889a2" />
 
-(Add health check screenshot here)
+<img width="755" height="426" alt="2" src="https://github.com/user-attachments/assets/c2202544-f775-439c-9a53-00834ea31eb4" />
+
+
 
 4. Create S3 bucket
 
