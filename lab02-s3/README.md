@@ -57,9 +57,6 @@ LocalStack was started in detached mode:
 localstack start -d
 ```
 
-📸 Screenshot:
-
-(Add LocalStack running screenshot here)
 
 2. Create S3 Buckets
 
@@ -69,9 +66,8 @@ awslocal s3 mb s3://lecafe-assets
 awslocal s3 mb s3://lecafe-website
 awslocal s3 mb s3://lecafe-logs
 
-📸 Screenshot:
+<img width="1357" height="642" alt="1" src="https://github.com/user-attachments/assets/f5553327-e68c-4376-8a51-3b5f09f396a9" />
 
-(Add bucket creation screenshot here)
 
 3. Enable Versioning on Assets Bucket
    awslocal s3api put-bucket-versioning --bucket lecafe-assets --versioning-configuration Status=Enabled
@@ -80,9 +76,8 @@ Verify:
 
 awslocal s3api get-bucket-versioning --bucket lecafe-assets
 
-📸 Screenshot:
+<img width="1407" height="170" alt="2" src="https://github.com/user-attachments/assets/5d81728d-f1fa-473b-af9e-b22f140339be" />
 
-(Add versioning enabled screenshot here)
 
 4. Upload Object (Version 1 and 2)
    echo "Le Café App Config — version 1" > config.txt
@@ -91,16 +86,17 @@ awslocal s3api get-bucket-versioning --bucket lecafe-assets
 echo "Le Café App Config — version 2 (updated endpoint)" > config.txt
 awslocal s3 cp config.txt s3://lecafe-assets/app/config.txt
 
-📸 Screenshot:
+<img width="1116" height="132" alt="step5" src="https://github.com/user-attachments/assets/79bcbc12-1378-4216-816a-0a9a76f7e994" />
 
-(Add upload + overwrite screenshot here)
 
 5. List Object Versions
    awslocal s3api list-object-versions --bucket lecafe-assets
 
-📸 Screenshot:
+   <img width="1300" height="786" alt="step55" src="https://github.com/user-attachments/assets/075c6454-ac63-49f8-a8d6-568c94c07a1c" />
 
-(Add version list screenshot here)
+
+<img width="931" height="358" alt="step6" src="https://github.com/user-attachments/assets/d0bb0022-6e2d-476e-a0c3-f2167a3a9fd9" />
+
 
 6. Restore Previous Version
    awslocal s3api get-object \
@@ -113,9 +109,9 @@ Verify:
 
 type recovered-config.txt
 
-📸 Screenshot:
+<img width="1055" height="113" alt="step7" src="https://github.com/user-attachments/assets/a385b7a7-2899-45bc-b714-d27892b2ca57" />
 
-(Add restored file screenshot here)
+
 
 7. Delete Object (Create Delete Marker)
    awslocal s3 rm s3://lecafe-assets/app/config.txt
@@ -124,9 +120,8 @@ Check versions again:
 
 awslocal s3api list-object-versions --bucket lecafe-assets
 
-📸 Screenshot:
+<img width="1253" height="677" alt="step77" src="https://github.com/user-attachments/assets/836e6634-554b-45b0-b2ee-3706f30a2841" />
 
-(Add delete marker screenshot here)
 
 8. Permanent Cleanup
 
@@ -148,6 +143,6 @@ awslocal s3 rb s3://lecafe-assets
 awslocal s3 rb s3://lecafe-website
 awslocal s3 rb s3://lecafe-logs
 
-📸 Screenshot:
+<img width="1292" height="698" alt="step8" src="https://github.com/user-attachments/assets/cb6e0260-18f1-461a-9b0b-93a1c2bca664" />
 
-(Add cleanup screenshot here)
+
