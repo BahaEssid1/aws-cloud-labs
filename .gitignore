@@ -1,0 +1,5 @@
+lecafe-keypair.pem
+.env
+*.log
+.localstack
+__pycache__/
