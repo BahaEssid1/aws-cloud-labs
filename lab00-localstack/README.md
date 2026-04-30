@@ -155,8 +155,8 @@ localstack logs
 
 
 🧹 Cleanup
-localstack stop
-docker ps --filter name=localstack
+- localstack stop
+- docker ps --filter name=localstack
 
 <img width="896" height="121" alt="13" src="https://github.com/user-attachments/assets/a1c7bfb9-1aba-4754-8c7c-f03a97c811ab" />
 
