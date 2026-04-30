@@ -47,9 +47,10 @@ Each actor must have **only the permissions they need and nothing more**.
 - bob → Developer
 - charlie → Operations
 
-📸 Screenshot:
+<img width="1160" height="687" alt="1" src="https://github.com/user-attachments/assets/b14b2346-bd78-4555-86a0-6797497076b8" />
 
-> [Insert IAM users creation screenshot here]
+<img width="846" height="608" alt="2" src="https://github.com/user-attachments/assets/503958d6-af51-4f26-8ca9-8aff51fb6588" />
+
 
 ---
 
@@ -60,9 +61,12 @@ Each actor must have **only the permissions they need and nothing more**.
 
 Users were assigned to groups instead of attaching policies directly, following AWS best practices.
 
-📸 Screenshot:
+<img width="1062" height="481" alt="3" src="https://github.com/user-attachments/assets/d2e1126f-b218-491e-b85e-7e97003404c4" />
 
-> [Insert IAM group creation + membership screenshot here]
+<img width="1232" height="660" alt="4" src="https://github.com/user-attachments/assets/72b6a2fa-fc16-48f3-800a-35f56d522e6b" />
+
+
+
 
 ---
 
@@ -76,9 +80,8 @@ This role represents the backend application identity.
 
 It is configured with a **trust policy** allowing EC2 to assume it.
 
-📸 Screenshot:
+<img width="1000" height="456" alt="5" src="https://github.com/user-attachments/assets/7794da37-1125-413c-9ef8-b81e319ea731" />
 
-> [Insert role creation screenshot here]
 
 ---
 
@@ -99,9 +102,7 @@ Allows the backend application to:
 
 Policies follow the **principle of least privilege**.
 
-📸 Screenshot:
-
-> [Insert policy JSON + attachment screenshot here]
+<img width="1397" height="362" alt="6" src="https://github.com/user-attachments/assets/4421ef3a-f9fd-4d27-8d53-7e1df0666ac1" />
 
 ---
 
@@ -110,9 +111,7 @@ Policies follow the **principle of least privilege**.
 - S3 Bucket: `lecafe-assets`
 - SQS Queue: `lecafe-orders`
 
-📸 Screenshot:
-
-> [Insert bucket and queue creation screenshot here]
+<img width="1413" height="237" alt="10" src="https://github.com/user-attachments/assets/585fb509-58a6-47b8-9e44-cdf7a0324df9" />
 
 ---
 
@@ -123,3 +122,5 @@ The application role was tested using STS:
 ```bash
 awslocal sts assume-role --role-arn arn:aws:iam::000000000000:role/lecafe-app-role --role-session-name test-session
 ```
+<img width="1396" height="398" alt="11" src="https://github.com/user-attachments/assets/adda4ae9-5870-4a06-901d-fe6a0ec96e99" />
+
