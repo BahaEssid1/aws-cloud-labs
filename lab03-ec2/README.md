@@ -59,7 +59,8 @@ localstack status services
 export AWS_PROFILE=localstack
 ```
 
-📸 Screenshot Placeholder
+<img width="1168" height="457" alt="1" src="https://github.com/user-attachments/assets/40695ee2-2074-496c-a235-25cbeff4c4e3" />
+
 
 ---
 
@@ -89,7 +90,8 @@ awslocal iam create-role \
   echo "Role already exists — continuing."
 ```
 
-📸 Screenshot Placeholder
+<img width="948" height="558" alt="1" src="https://github.com/user-attachments/assets/aea69df7-dda5-44a8-9c14-acc7e9dfb059" />
+
 
 ---
 
@@ -135,7 +137,7 @@ awslocal iam put-role-policy \
 echo "IAM setup complete."
 ```
 
-📸 Screenshot Placeholder
+
 
 ---
 
@@ -157,7 +159,8 @@ echo "Le Café App Config — v1.0" > config.txt
 awslocal s3 cp config.txt s3://lecafe-assets/app/config.txt
 ```
 
-📸 Screenshot Placeholder
+<img width="1137" height="232" alt="part 1 step 2" src="https://github.com/user-attachments/assets/d1cc9401-d06d-4ff6-866c-2f1581dde995" />
+
 
 ---
 
@@ -171,7 +174,7 @@ awslocal sqs create-queue --queue-name lecafe-orders 2>/dev/null || echo "Queue 
 echo "S3 and SQS setup complete."
 ```
 
-📸 Screenshot Placeholder
+
 
 ---
 
@@ -185,6 +188,7 @@ awslocal ec2 create-key-pair \
   --query 'KeyMaterial' \
   --output text > lecafe-keypair.pem
 ```
+
 
 ---
 
@@ -202,7 +206,8 @@ chmod 400 lecafe-keypair.pem
 awslocal ec2 describe-key-pairs
 ```
 
-📸 Screenshot Placeholder
+<img width="992" height="692" alt="step 3" src="https://github.com/user-attachments/assets/8a50d085-043c-44d9-9f84-cb5b8604a734" />
+
 
 ---
 
@@ -234,7 +239,8 @@ SG_ID=$(awslocal ec2 create-security-group \
 echo "Security Group ID: $SG_ID"
 ```
 
-📸 Screenshot Placeholder
+<img width="1027" height="337" alt="step5" src="https://github.com/user-attachments/assets/1d17d232-5fb6-4f8b-968f-59cc242b0405" />
+
 
 ---
 
@@ -271,6 +277,7 @@ awslocal ec2 authorize-security-group-ingress \
   --port 22 \
   --cidr 0.0.0.0/0
 ```
+<img width="971" height="823" alt="step 6" src="https://github.com/user-attachments/assets/a6d325f1-5162-43df-99dd-7896b85455c2" />
 
 ---
 
@@ -280,7 +287,9 @@ awslocal ec2 authorize-security-group-ingress \
 awslocal ec2 describe-security-groups --group-ids $SG_ID
 ```
 
-📸 Screenshot Placeholder
+<img width="1141" height="830" alt="step 6 (2)" src="https://github.com/user-attachments/assets/4ad834f7-2804-4ace-929e-94d643293856" />
+<img width="1042" height="827" alt="step 6 (3)" src="https://github.com/user-attachments/assets/e27d30fe-66d1-4dde-9df1-7015a128568e" />
+
 
 ---
 
@@ -293,6 +302,7 @@ AMI_ID="ami-0c02fb55956c7d316"
 
 echo "Using AMI: $AMI_ID"
 ```
+<img width="812" height="97" alt="step 7" src="https://github.com/user-attachments/assets/63d46a19-576e-4e15-a9be-56b78169c09b" />
 
 ---
 
@@ -313,7 +323,8 @@ awslocal iam add-role-to-instance-profile \
 echo "Instance profile ready."
 ```
 
-📸 Screenshot Placeholder
+<img width="977" height="827" alt="step 8" src="https://github.com/user-attachments/assets/2c1fe804-0f61-479f-83e3-9eda51b42015" />
+
 
 ---
 
@@ -342,7 +353,8 @@ echo "Le Café bootstrap complete." >> /var/log/lecafe-setup.log
 EOF
 ```
 
-📸 Screenshot Placeholder
+<img width="695" height="271" alt="step 9" src="https://github.com/user-attachments/assets/567d8bb9-9390-4edc-a82f-707ed10628e8" />
+
 
 ---
 
@@ -364,7 +376,8 @@ INSTANCE_ID=$(awslocal ec2 run-instances \
 echo "Instance launched: $INSTANCE_ID"
 ```
 
-📸 Screenshot Placeholder
+<img width="1362" height="250" alt="step 10" src="https://github.com/user-attachments/assets/0aec411c-1d44-4804-b825-9be9527a456e" />
+
 
 ---
 
@@ -387,7 +400,9 @@ awslocal ec2 describe-instances \
   --output table
 ```
 
-📸 Screenshot Placeholder
+<img width="790" height="185" alt="step 11" src="https://github.com/user-attachments/assets/5ac00a4c-2764-40c2-8219-e8f30eb16b96" />
+
+
 
 ---
 
@@ -404,7 +419,8 @@ awslocal ec2 describe-instances \
   --output table
 ```
 
-📸 Screenshot Placeholder
+<img width="827" height="818" alt="step 11 (2)" src="https://github.com/user-attachments/assets/978d3b2d-184b-4698-b7cc-33785f6d3ff8" />
+
 
 ---
 
@@ -427,7 +443,8 @@ awslocal ec2 describe-instances \
   --output text
 ```
 
-📸 Screenshot Placeholder
+<img width="1108" height="712" alt="step 12" src="https://github.com/user-attachments/assets/b1273075-e606-4029-abe0-7c5ba1d5af8c" />
+
 
 ---
 
@@ -448,7 +465,8 @@ awslocal ec2 describe-instances \
   --output text
 ```
 
-📸 Screenshot Placeholder
+<img width="770" height="827" alt="step12" src="https://github.com/user-attachments/assets/fbe306cf-5e42-420f-8335-80d864e63ae3" />
+
 
 ---
 
@@ -473,7 +491,8 @@ echo "Would connect to: $PUBLIC_IP"
 ssh -i lecafe-keypair.pem ec2-user@$PUBLIC_IP
 ```
 
-📸 Screenshot Placeholder
+<img width="1102" height="581" alt="step 13 (2)" src="https://github.com/user-attachments/assets/43b7c119-5baf-4e9f-88d0-63a64a3d7514" />
+
 
 ---
 
@@ -487,7 +506,8 @@ awslocal ec2 describe-instances \
   --query 'Reservations[0].Instances[0].IamInstanceProfile'
 ```
 
-📸 Screenshot Placeholder
+<img width="948" height="187" alt="step 14" src="https://github.com/user-attachments/assets/45d4d2f8-6304-4327-9bcd-7fc153118ef0" />
+
 
 ---
 
@@ -515,6 +535,7 @@ awslocal s3 ls s3://lecafe-assets/ --recursive
 ```bash
 awslocal sqs get-queue-url --queue-name lecafe-orders
 ```
+<img width="986" height="321" alt="step 15" src="https://github.com/user-attachments/assets/e6735b7b-2413-4a85-a6e9-81cacc0a5a1e" />
 
 ---
 
@@ -533,7 +554,8 @@ awslocal ec2 describe-instances \
   --output table
 ```
 
-📸 Screenshot Placeholder
+<img width="1253" height="342" alt="step 16" src="https://github.com/user-attachments/assets/191e6f35-2d76-48d8-a586-4e102d80d7fb" />
+
 
 ---
 
@@ -553,7 +575,6 @@ localstack stop
 docker ps --filter name=localstack
 ```
 
-📸 Screenshot Placeholder
 
 ---
 
