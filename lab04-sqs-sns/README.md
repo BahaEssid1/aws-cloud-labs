@@ -42,7 +42,8 @@ localstack status services
 export AWS_PROFILE=localstack
 ```
 
-<img width="1400" height="500" alt="1" src="ADD_SCREENSHOT_HERE" />
+<img width="1168" height="457" alt="1" src="https://github.com/user-attachments/assets/9a5955a8-c721-49a6-89b5-a47f76431dae" />
+
 
 ---
 
@@ -71,7 +72,12 @@ KITCHEN_QUEUE_URL=$(awslocal sqs get-queue-url \
 echo $KITCHEN_QUEUE_URL
 ```
 
-<img width="1400" height="500" alt="2" src="ADD_SCREENSHOT_HERE" />
+<img width="1010" height="470" alt="step 3" src="https://github.com/user-attachments/assets/387ea17a-e836-4711-bb68-0bbaea93a6fd" />
+<img width="1217" height="223" alt="step3" src="https://github.com/user-attachments/assets/4987ed07-481b-4810-9305-d2504ade679b" />
+<img width="890" height="73" alt="step  3" src="https://github.com/user-attachments/assets/688bb362-7cff-4e41-b360-278de6474653" />
+
+
+
 
 ---
 
@@ -113,7 +119,8 @@ awslocal sqs set-queue-attributes \
   }"
 ```
 
-<img width="1400" height="500" alt="3" src="ADD_SCREENSHOT_HERE" />
+<img width="987" height="377" alt="step 4" src="https://github.com/user-attachments/assets/a9778728-d9bc-47d3-a396-27446947eddf" />
+
 
 ---
 
@@ -166,7 +173,8 @@ awslocal sqs get-queue-attributes \
   --attribute-names ApproximateNumberOfMessages
 ```
 
-<img width="1400" height="500" alt="4" src="ADD_SCREENSHOT_HERE" />
+<img width="875" height="713" alt="step 5" src="https://github.com/user-attachments/assets/1efda775-ad50-4889-8aa5-59ab1861263f" />
+
 
 ---
 
@@ -204,7 +212,8 @@ awslocal sqs delete-message \
   --receipt-handle "$RECEIPT_HANDLE"
 ```
 
-<img width="1400" height="500" alt="5" src="ADD_SCREENSHOT_HERE" />
+<img width="1378" height="802" alt="step 6" src="https://github.com/user-attachments/assets/b343e883-ed70-4de0-a8ac-d1759b05f19e" />
+
 
 ---
 
@@ -247,7 +256,10 @@ awslocal sqs send-message \
   --message-group-id "table-1"
 ```
 
-<img width="1400" height="500" alt="6" src="ADD_SCREENSHOT_HERE" />
+<img width="1028" height="317" alt="step7" src="https://github.com/user-attachments/assets/252d12e0-01d7-4df2-9337-3111a6a7251a" />
+<img width="863" height="288" alt="step 7" src="https://github.com/user-attachments/assets/841f8b8d-7d15-456a-8e49-83bf8cf01670" />
+
+
 
 ---
 
@@ -264,7 +276,8 @@ TOPIC_ARN=$(awslocal sns create-topic \
 echo $TOPIC_ARN
 ```
 
-<img width="1400" height="500" alt="7" src="ADD_SCREENSHOT_HERE" />
+<img width="1071" height="180" alt="step 8" src="https://github.com/user-attachments/assets/ae548f8b-1429-43a7-a916-49c6113dece7" />
+
 
 ---
 
@@ -308,7 +321,8 @@ MANAGER_ARN=$(awslocal sqs get-queue-attributes \
   --output text)
 ```
 
-<img width="1400" height="500" alt="8" src="ADD_SCREENSHOT_HERE" />
+<img width="1403" height="510" alt="step 9" src="https://github.com/user-attachments/assets/2b8e0397-6c7b-43fa-9d65-f57a7085ea69" />
+
 
 ---
 
@@ -345,7 +359,10 @@ apply_sns_policy "$LOYALTY_QUEUE_URL" "$LOYALTY_ARN"
 apply_sns_policy "$MANAGER_QUEUE_URL" "$MANAGER_ARN"
 ```
 
-<img width="1400" height="500" alt="9" src="ADD_SCREENSHOT_HERE" />
+<img width="1137" height="712" alt="step 10" src="https://github.com/user-attachments/assets/4fb27dd5-d0cf-44c7-852f-f61c5310e5c3" />
+<img width="377" height="302" alt="step10" src="https://github.com/user-attachments/assets/8e9a08e1-37a8-437c-aa58-14d78f223dbc" />
+
+
 
 ---
 
@@ -401,7 +418,8 @@ awslocal sns set-subscription-attributes \
   --attribute-value '{"Priority": ["high"]}'
 ```
 
-<img width="1400" height="500" alt="11" src="ADD_SCREENSHOT_HERE" />
+<img width="1277" height="748" alt="step 11" src="https://github.com/user-attachments/assets/4819ae5c-9789-4e9d-b818-26a9330dbf8d" />
+
 
 ---
 
@@ -450,7 +468,7 @@ awslocal sns publish \
   --subject "New Le Cafe Order"
 ```
 
-<img width="1400" height="500" alt="12" src="ADD_SCREENSHOT_HERE" />
+
 
 ---
 
@@ -480,7 +498,7 @@ awslocal sqs get-queue-attributes \
   --attribute-names ApproximateNumberOfMessages
 ```
 
-<img width="1400" height="500" alt="13" src="ADD_SCREENSHOT_HERE" />
+
 
 ---
 
@@ -492,7 +510,7 @@ awslocal sqs receive-message \
   --max-number-of-messages 1 | python3 -m json.tool
 ```
 
-<img width="1400" height="500" alt="14" src="ADD_SCREENSHOT_HERE" />
+
 
 ---
 
@@ -553,6 +571,6 @@ localstack stop
 docker ps --filter name=localstack
 ```
 
-<img width="1400" height="500" alt="15" src="ADD_SCREENSHOT_HERE" />
+
 
 ---
