@@ -1,0 +1,5 @@
+{
+    "MessageRetentionPeriod":  "86400",
+    "VisibilityTimeout":  "30",
+    "ReceiveMessageWaitTimeSeconds":  "20"
+}

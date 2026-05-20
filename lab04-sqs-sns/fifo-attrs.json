@@ -1,0 +1,5 @@
+{
+    "FifoQueue":  "true",
+    "VisibilityTimeout":  "60",
+    "ContentBasedDeduplication":  "true"
+}
