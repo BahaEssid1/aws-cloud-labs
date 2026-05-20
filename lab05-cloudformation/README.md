@@ -50,7 +50,8 @@ localstack status services
 export AWS_PROFILE=localstack
 ```
 
-<img width="1365" height="418" alt="1" src="https://github.com/user-attachments/assets/11111111-aaaa-bbbb-cccc-111111111111" />
+<img width="1168" height="457" alt="1" src="https://github.com/user-attachments/assets/bcde2b05-4863-4366-8082-f617d3b93017" />
+
 
 ---
 
@@ -62,7 +63,8 @@ mkdir -p ~/lecafe-iac
 cd ~/lecafe-iac
 ```
 
-<img width="982" height="196" alt="2" src="https://github.com/user-attachments/assets/22222222-aaaa-bbbb-cccc-222222222222" />
+<img width="852" height="340" alt="step 1" src="https://github.com/user-attachments/assets/f74cafda-1df0-43e4-9f4e-98b60c8e1488" />
+
 
 ---
 
@@ -100,7 +102,8 @@ Parameters:
 YAML
 ```
 
-<img width="1402" height="329" alt="3" src="https://github.com/user-attachments/assets/33333333-aaaa-bbbb-cccc-333333333333" />
+<img width="875" height="443" alt="step 2" src="https://github.com/user-attachments/assets/e8967fb4-1980-4d01-97dd-2b5bb5cfc8e4" />
+
 
 ---
 
@@ -155,7 +158,7 @@ Resources:
 YAML
 ```
 
-<img width="1447" height="557" alt="4" src="https://github.com/user-attachments/assets/44444444-aaaa-bbbb-cccc-444444444444" />
+
 
 ---
 
@@ -194,7 +197,8 @@ cat >> lecafe-stack.yaml << 'YAML'
 YAML
 ```
 
-<img width="1427" height="505" alt="5" src="https://github.com/user-attachments/assets/55555555-aaaa-bbbb-cccc-555555555555" />
+<img width="1406" height="580" alt="step 4" src="https://github.com/user-attachments/assets/a80aa203-89ec-4c44-9c57-e8730b81ce63" />
+
 
 ---
 
@@ -237,7 +241,7 @@ cat >> lecafe-stack.yaml << 'YAML'
 YAML
 ```
 
-<img width="1443" height="693" alt="6" src="https://github.com/user-attachments/assets/66666666-aaaa-bbbb-cccc-666666666666" />
+
 
 ---
 
@@ -277,7 +281,7 @@ cat >> lecafe-stack.yaml << 'YAML'
 YAML
 ```
 
-<img width="1430" height="640" alt="7" src="https://github.com/user-attachments/assets/77777777-aaaa-bbbb-cccc-777777777777" />
+
 
 ---
 
@@ -307,7 +311,7 @@ Outputs:
 YAML
 ```
 
-<img width="1408" height="462" alt="8" src="https://github.com/user-attachments/assets/88888888-aaaa-bbbb-cccc-888888888888" />
+
 
 ---
 
@@ -320,7 +324,7 @@ awslocal cloudformation validate-template \
   --template-body file://lecafe-stack.yaml
 ```
 
-<img width="1444" height="303" alt="9" src="https://github.com/user-attachments/assets/99999999-aaaa-bbbb-cccc-999999999999" />
+
 
 ---
 
@@ -337,7 +341,7 @@ awslocal cloudformation create-stack \
   --capabilities CAPABILITY_NAMED_IAM
 ```
 
-<img width="1436" height="357" alt="10" src="https://github.com/user-attachments/assets/aaaaaaaa-1111-bbbb-cccc-aaaaaaaaaaaa" />
+
 
 ---
 
@@ -351,7 +355,8 @@ awslocal cloudformation describe-stack-events \
   --output table
 ```
 
-<img width="1451" height="764" alt="11" src="https://github.com/user-attachments/assets/bbbbbbbb-1111-bbbb-cccc-bbbbbbbbbbbb" />
+<img width="1321" height="695" alt="step 11" src="https://github.com/user-attachments/assets/17a99771-ef59-4190-922a-cf0a7bab4be4" />
+
 
 ---
 
@@ -405,7 +410,8 @@ awslocal cloudformation create-change-set \
   --capabilities CAPABILITY_NAMED_IAM
 ```
 
-<img width="1437" height="354" alt="14" src="https://github.com/user-attachments/assets/eeeeeeee-1111-bbbb-cccc-eeeeeeeeeeee" />
+<img width="1087" height="142" alt="step10" src="https://github.com/user-attachments/assets/bac130b2-c288-4c64-920d-5994bedcf22d" />
+
 
 ---
 
@@ -418,7 +424,8 @@ awslocal cloudformation describe-change-set \
   --output table
 ```
 
-<img width="1450" height="378" alt="15" src="https://github.com/user-attachments/assets/ffffffff-1111-bbbb-cccc-ffffffffffff" />
+<img width="1247" height="457" alt="step 12" src="https://github.com/user-attachments/assets/70214349-662d-4a9b-82ac-03c61fc64e10" />
+
 
 ---
 
@@ -430,7 +437,7 @@ awslocal cloudformation execute-change-set \
   --change-set-name update-retention
 ```
 
-<img width="1410" height="222" alt="16" src="https://github.com/user-attachments/assets/12121212-aaaa-bbbb-cccc-121212121212" />
+
 
 ---
 
@@ -444,7 +451,6 @@ awslocal cloudformation list-stack-resources \
   --output table
 ```
 
-<img width="1448" height="772" alt="17" src="https://github.com/user-attachments/assets/13131313-aaaa-bbbb-cccc-131313131313" />
 
 ---
 
@@ -461,7 +467,7 @@ awslocal sns list-subscriptions-by-topic \
   --output table
 ```
 
-<img width="1455" height="434" alt="18" src="https://github.com/user-attachments/assets/14141414-aaaa-bbbb-cccc-141414141414" />
+
 
 ---
 
@@ -477,7 +483,7 @@ awslocal sns publish \
   --subject "New Le Cafe Order"
 ```
 
-<img width="1416" height="260" alt="19" src="https://github.com/user-attachments/assets/15151515-aaaa-bbbb-cccc-151515151515" />
+
 
 ---
 
@@ -499,7 +505,7 @@ for QUEUE_NAME in \
 done
 ```
 
-<img width="1450" height="265" alt="20" src="https://github.com/user-attachments/assets/16161616-aaaa-bbbb-cccc-161616161616" />
+
 
 ---
 
@@ -519,7 +525,7 @@ awslocal cloudformation describe-stacks \
   --stack-name lecafe-stack
 ```
 
-<img width="1401" height="217" alt="21" src="https://github.com/user-attachments/assets/17171717-aaaa-bbbb-cccc-171717171717" />
+
 
 ---
 
